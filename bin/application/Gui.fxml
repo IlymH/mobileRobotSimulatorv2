@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <StackPane>
+         <children>
+            <SplitPane dividerPositions="0.29245283018867924" layoutY="7.0" prefHeight="495.0" prefWidth="744.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <AnchorPane fx:id="controlPane" prefHeight="493.0" prefWidth="232.0">
+                     <children>
+                        <StackPane layoutX="14.0" layoutY="14.0">
+                           <children>
+                              <HBox layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="172.0" spacing="20.0" AnchorPane.bottomAnchor="454.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
+                           </children>
+                        </StackPane>
+                        <Label fx:id="RoboTC" layoutX="4.0" layoutY="122.0" prefHeight="35.0" prefWidth="206.0" text="Robot Cordinates" />
+                        <Label fx:id="Cordinates" layoutX="4.0" layoutY="227.0" prefHeight="35.0" prefWidth="206.0" text="Cordinates" />
+                        <Label fx:id="RobotR" layoutX="4.0" layoutY="192.0" prefHeight="35.0" prefWidth="206.0" text="Robot Rotation" />
+                        <Label fx:id="RobotS" layoutX="4.0" layoutY="157.0" prefHeight="35.0" prefWidth="206.0" text="Robot Speed" />
+                        <Label fx:id="SensorDL" layoutX="4.0" layoutY="255.0" prefHeight="35.0" prefWidth="206.0" text="Sensor distance L" />
+                        <Label fx:id="SensorDR" layoutX="4.0" layoutY="290.0" prefHeight="35.0" prefWidth="206.0" text="Sensor distance R" />
+                        <Button fx:id="SetTarget" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Set target" />
+                        <Button fx:id="Reset" layoutX="103.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Reset" />
+                        <Button fx:id="Train" layoutX="15.0" layoutY="373.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Train" />
+                        <Button fx:id="Run" layoutX="108.0" layoutY="373.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Run" />
+                        <CheckBox fx:id="ANNChoice" layoutX="14.0" layoutY="332.0" mnemonicParsing="false" text="Use ANN" />
+                        <Button fx:id="init" layoutX="103.0" layoutY="42.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="init" />
+                        <Button fx:id="start" layoutX="14.0" layoutY="42.0" mnemonicParsing="false" text="Start/Stop" />
+                        <TextField fx:id="hiddenLayersText" layoutX="117.0" layoutY="423.0" prefHeight="25.0" prefWidth="82.0" />
+                        <TextField fx:id="learningRateText" layoutX="117.0" layoutY="454.0" prefHeight="25.0" prefWidth="82.0" />
+                        <Label layoutX="7.0" layoutY="427.0" prefHeight="17.0" prefWidth="97.0" text="Set hidden layers:" />
+                        <Label layoutX="7.0" layoutY="458.0" prefHeight="17.0" prefWidth="97.0" text="Set learning rate:" />
+                        <Button fx:id="Data" layoutX="108.0" layoutY="328.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Gather data" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="398.0" prefWidth="228.0">
+                     <children>
+                        <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane fx:id="drawPane" layoutX="-1.0" prefHeight="493.0" prefWidth="521.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </StackPane>
+      <Pane fx:id="ANNPane" layoutY="495.0" prefHeight="124.0" prefWidth="744.0">
+         <children>
+            <Separator layoutX="131.0" layoutY="-1.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <MenuBar layoutY="-3.0" prefHeight="25.0" prefWidth="744.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
